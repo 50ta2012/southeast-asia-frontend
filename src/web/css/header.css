@@ -1,0 +1,60 @@
+.root-container .header {
+  display: grid;
+  grid-template-columns: 33% 33% auto;
+}
+
+.root-container .header > div {
+  padding: 5px 0px;
+}
+
+.root-container .header > div:nth-child(2) {
+  padding: 0 25px;
+}
+
+.root-container .header > div:nth-child(3) {
+  padding-right: 15px;
+}
+
+.root-container .header .header-title {
+  font-size: 2rem;
+  margin: auto;
+  font-weight: bold;
+}
+
+.root-container .header .header-feature {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.root-container .header .header-feature .header-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.root-container .header .header-feature .header-dropdown img {
+  cursor: pointer;
+}
+
+.root-container .header .header-feature .header-dropdown .dropdown-content {
+  background-color: #fff;
+  display: none;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 0.25rem;
+  padding: 8px;
+  position: absolute;
+  right: 0px;
+}
+
+.root-container .header .header-feature .header-dropdown .dropdown-content a {
+  color: black;
+  padding: 4px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  min-width: 150px;
+}
+
+.root-container .header .header-feature .header-dropdown .dropdown-content a:hover {
+  background-color: #ddd;
+}
