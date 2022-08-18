@@ -1,7 +1,7 @@
 import titleMap from "../web/title.json"
 import { HelmetProvider, Helmet } from "react-helmet-async";
 
-export default function Tab3() {
+export default function Live() {
   return (
     <HelmetProvider>
       <Helmet>
