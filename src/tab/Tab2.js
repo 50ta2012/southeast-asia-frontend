@@ -8,7 +8,7 @@ export default function Tab2() {
         <title>{titleMap["/tab2"]}</title>
       </Helmet>
       <h2>
-        分頁二
+        分頁二內容
       </h2>
     </HelmetProvider>
   )

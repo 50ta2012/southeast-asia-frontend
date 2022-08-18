@@ -8,7 +8,7 @@ export default function Tab3() {
         <title>{titleMap["/tab3"]}</title>
       </Helmet>
       <h2>
-        分頁三
+        分頁三內容
       </h2>
     </HelmetProvider>
   )
