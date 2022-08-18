@@ -8,7 +8,7 @@ export default function UserProfile() {
         <title>{titleMap["/profile"]}</title>
       </Helmet>
       <h2>
-        個人資料內容
+        個人資料內容...
       </h2>
     </HelmetProvider>
   )

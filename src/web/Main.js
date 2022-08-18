@@ -1,8 +1,8 @@
 import "./css/main.css";
 import titleMap from "./title.json";
-import Tab1 from "../tab/Tab1";
-import Tab2 from "../tab/Tab2";
-import Tab3 from "../tab/Tab3";
+import Lpr from "../tab/Lpr";
+import Violation from "../tab/Violation";
+import Live from "../tab/Live";
 import {
   BrowserRouter as Router,
   Routes,
@@ -23,9 +23,9 @@ export function Main() {
       <div className="main-content">
         <Router>
           <Routes>
-            <Route path="/" element={<Tab1 />} />
-            <Route path="/tab2" element={<Tab2 />} />
-            <Route path="/tab3" element={<Tab3 />} />
+            <Route path="/" element={<Violation />} />
+            <Route path="/lpr" element={<Lpr />} />
+            <Route path="/live" element={<Live />} />
             <Route path="/profile" element={<UserProfile />} />
           </Routes>
         </Router>

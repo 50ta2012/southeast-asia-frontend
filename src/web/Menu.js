@@ -14,15 +14,15 @@ export default function Menu() {
         </li>
         <li className="nav-item">
           <div className="nav-link">
-            <a href="/tab2">
-              <div className="nav-text">{titleMap["/tab2"]}</div>
+            <a href="/lpr">
+              <div className="nav-text">{titleMap["/lpr"]}</div>
             </a>
           </div>
         </li>
         <li className="nav-item">
           <div className="nav-link">
-            <a href="/tab3">
-              <div className="nav-text">{titleMap["/tab3"]}</div>
+            <a href="/live">
+              <div className="nav-text">{titleMap["/live"]}</div>
             </a>
           </div>
         </li>

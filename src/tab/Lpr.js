@@ -1,14 +1,14 @@
 import titleMap from "../web/title.json"
 import { HelmetProvider, Helmet } from "react-helmet-async";
 
-export default function Tab2() {
+export default function Lpr() {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>{titleMap["/tab2"]}</title>
+        <title>{titleMap["/lpr"]}</title>
       </Helmet>
       <h2>
-        分頁二內容
+        車牌辨識內容...
       </h2>
     </HelmetProvider>
   )

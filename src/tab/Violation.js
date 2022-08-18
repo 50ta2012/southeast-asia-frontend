@@ -1,14 +1,14 @@
 import titleMap from "../web/title.json"
 import { HelmetProvider, Helmet } from "react-helmet-async";
 
-export default function Tab3() {
+export default function Violation() {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>{titleMap["/tab3"]}</title>
+        <title>{titleMap["/"]}</title>
       </Helmet>
       <h2>
-        分頁三內容
+        違規記錄內容...
       </h2>
     </HelmetProvider>
   )
