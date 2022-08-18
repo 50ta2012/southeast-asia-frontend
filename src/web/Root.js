@@ -1,9 +1,11 @@
-import "bootstrap/dist/js/bootstrap.min"
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/js/bootstrap.min";
+import "bootstrap/dist/css/bootstrap.min.css";
 // import { Helmet } from "react-helmet";
-import "./css/root.css"
+import "./css/root.css";
 
 import Header from "./Header";
+import Menu from "./Menu";
+import Main from "./Main";
 
 export default function Root() {
   return (
@@ -14,8 +16,8 @@ export default function Root() {
 
       <div className="root-container">
         <Header/>
-        <div className="menu"></div>
-        <div className="main"></div>
+        <Menu />
+        <Main />
       </div>
     </>
   );

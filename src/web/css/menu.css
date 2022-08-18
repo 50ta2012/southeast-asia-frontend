@@ -1,0 +1,32 @@
+.root-container .menu {
+  padding: 5px 350px 15px 350px;
+}
+
+.root-container .menu ul li div.nav-link div.nav-text {
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 4px 4px;
+
+  position: relative;
+}
+
+.root-container .menu ul li div.nav-link div.nav-text:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 0;
+  z-index: 1;
+  border-bottom: 3px solid #D52027;
+  animation: grow 0.1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes grow {
+  100% {
+    width: 100%;
+  }
+}

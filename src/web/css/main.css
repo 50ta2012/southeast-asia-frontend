@@ -1,0 +1,12 @@
+.root-container .main {
+  padding: 10px 50px;
+}
+
+.root-container .main-title {
+  padding: 10px;
+  font-size: 3rem;
+  background-color: #D52027;
+  color: #fff;
+  width: max-content;
+  margin-bottom: 10px;
+}
