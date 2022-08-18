@@ -1,7 +1,15 @@
-export default function Tab2(){
-  return(
-    <h2>
-      分頁二
-    </h2>
+import titleMap from "../web/title.json"
+import { HelmetProvider, Helmet } from "react-helmet-async";
+
+export default function Tab2() {
+  return (
+    <HelmetProvider>
+      <Helmet>
+        <title>{titleMap["/tab2"]}</title>
+      </Helmet>
+      <h2>
+        分頁二
+      </h2>
+    </HelmetProvider>
   )
 }
