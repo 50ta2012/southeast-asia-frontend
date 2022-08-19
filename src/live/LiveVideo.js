@@ -14,7 +14,7 @@ import markers from './markers.json'
 
 
 const containerStyle = {
-  width: '100vw',
+  // width: '100vw',
   height: '100vh'
 };
 

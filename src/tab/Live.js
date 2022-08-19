@@ -8,9 +8,6 @@ export default function Live() {
       <Helmet>
         <title>{titleMap["/live"]}</title>
       </Helmet>
-      <h2>
-        即時影像內容...
-      </h2>
       <LiveVideo></LiveVideo>
     </HelmetProvider>
   )
