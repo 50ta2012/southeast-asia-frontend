@@ -1,5 +1,6 @@
 import titleMap from "../web/title.json"
 import { HelmetProvider, Helmet } from "react-helmet-async";
+import ViolationDemo from "../violation/ViolationDemo";
 
 export default function Violation() {
   return (
@@ -7,9 +8,8 @@ export default function Violation() {
       <Helmet>
         <title>{titleMap["/"]}</title>
       </Helmet>
-      <h2>
-        違規記錄內容...
-      </h2>
+      <ViolationDemo/>
+
     </HelmetProvider>
   )
 }
