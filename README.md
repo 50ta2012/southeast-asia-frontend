@@ -39,3 +39,36 @@ npm start
 </h2>
 ```
 替換成自己的 Component。
+
+## 部署 (開發模式)
+
+編譯
+```bash
+npm run build
+```
+
+第一次 pm2 部署
+```bash
+pm2 --name southeast_asia_frontend serve --spa build/ 18000
+```
+
+pm2 相關指令
+```bash
+# 啟動 app
+pm2 start southeast_asia_frontend
+
+# 停止
+pm2 stop southeast_asia_frontend
+
+# 重啟
+pm2 restart southeast_asia_frontend
+
+# Log
+pm2 log southeast_asia_frontend
+
+# 重啟
+pm2 restart southeast_asia_frontend
+
+# 刪除
+pm2 delete southeast_asia_frontend
+```
