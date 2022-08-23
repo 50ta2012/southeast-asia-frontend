@@ -34,7 +34,7 @@ document.addEventListener('click', (event) => {
   const dropContentEle = document.querySelector(".root-container .header-dropdown .dropdown-content");
   const style = window.getComputedStyle(dropContentEle);
 
-  if (style.getPropertyValue("display") === "block" && !personImgEle.contains(event.target)) {
+  if (style.getPropertyValue("display") === "block" && !personImgEle.contains(event.target) && !dropContentEle.contains(event.target)) {
     dropContentEle.style.display = "none";
   }
 });
