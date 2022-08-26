@@ -29,7 +29,7 @@ const center = {
 function LiveVideo() {
 
 
-  const source = "http://127.0.0.1:8080/stream/59ef9f53-af44-4dfe-b795-f2176af5e86b/index.m3u8";
+  const source = "https://twowayiotse.ddns.net/stream/cam2/index.m3u8";
 
   //const [showImg, setShowImg] = useState(false)
 

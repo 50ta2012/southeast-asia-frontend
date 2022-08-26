@@ -3,6 +3,8 @@
 ## 安裝
 ```
 npm i
+
+yarn add react-hls-player
 ```
 
 ## 啟動
