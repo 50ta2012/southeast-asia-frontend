@@ -4,5 +4,9 @@
   "header-logout": "登出",
   "menu-violation": "違規記錄",
   "menu-lpr": "車牌辨識",
-  "menu-live": "即時影像"
+  "menu-live": "即時影像",
+  "violation-title": "違規記錄",
+  "lpr-title": "車牌辨識",
+  "live-title": "即時影像",
+  "profile-title": "個人資料"
 }

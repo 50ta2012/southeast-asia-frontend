@@ -4,5 +4,9 @@
   "header-logout": "Logout",
   "menu-violation": "Violation",
   "menu-lpr": "LPR",
-  "menu-live": "Live"
+  "menu-live": "Live",
+  "violation-title": "Violation",
+  "lpr-title": "LPR",
+  "live-title": "Live",
+  "profile-title": "Profile"
 }

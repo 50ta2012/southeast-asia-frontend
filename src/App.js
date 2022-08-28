@@ -10,8 +10,6 @@ function LangProvider({ children }) {
     locale: "zh"
   });
 
-  console.log(lang)
-
   return (
     <LangContext.Provider value={{ lang, setLang }}>
       {children}

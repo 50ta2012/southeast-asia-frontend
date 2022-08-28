@@ -1,6 +1,5 @@
 import "./css/menu.css";
-import titleMap from "./title.json";
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage } from 'react-intl';
 import { Link } from "react-router-dom";
 
 export default function Menu() {
