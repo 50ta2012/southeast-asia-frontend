@@ -6,12 +6,20 @@ import Header from "./Header";
 import Menu from "./Menu";
 import { Main } from "./Main";
 
+import { IntlProvider } from "react-intl";
+import React, { useContext } from 'react';
+import { LangContext } from "../App";
+
 export default function Root() {
+  const { lang } = useContext(LangContext);
+
   return (
-    <div className="root-container">
-      <Header />
-      <Menu />
-      <Main />
-    </div>
+    <IntlProvider messages={lang.message} locale={lang.locale}>
+      <div className="root-container">
+        <Header />
+        <Menu />
+        <Main />
+      </div>
+    </IntlProvider>
   );
 }
