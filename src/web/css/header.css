@@ -42,11 +42,20 @@
   border: 1px solid rgba(0, 0, 0, .15);
   border-radius: 0.25rem;
   padding: 8px;
+  margin-top: 5px;
+}
+
+.header-dropdown .icon-container .person .dropdown-content{
   position: absolute;
   right: 0px;
 }
 
-.root-container .header .header-feature .header-dropdown .dropdown-content a {
+.header-dropdown .icon-container .globe .dropdown-content{
+  position: absolute;
+  right: 35px;
+}
+
+.root-container .header .header-feature .header-dropdown .dropdown-content * {
   color: black;
   padding: 4px 16px;
   text-decoration: none;
@@ -55,6 +64,13 @@
   min-width: 150px;
 }
 
-.root-container .header .header-feature .header-dropdown .dropdown-content a:hover {
+.root-container .header .header-feature .header-dropdown .dropdown-content *:hover {
   background-color: #ddd;
+  cursor: pointer;
+}
+
+.icon-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
 }
