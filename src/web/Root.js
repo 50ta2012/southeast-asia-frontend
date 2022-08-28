@@ -10,15 +10,19 @@ import { IntlProvider } from "react-intl";
 import React, { useContext } from 'react';
 import { LangContext } from "../App";
 
+import {  BrowserRouter as Router } from "react-router-dom";
+
 export default function Root() {
   const { lang } = useContext(LangContext);
 
   return (
     <IntlProvider messages={lang.message} locale={lang.locale}>
       <div className="root-container">
-        <Header />
-        <Menu />
-        <Main />
+        <Router>
+          <Header />
+          <Menu />
+          <Main />
+        </Router>
       </div>
     </IntlProvider>
   );

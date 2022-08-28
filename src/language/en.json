@@ -1,5 +1,8 @@
 {
   "header-title": "Vehicle Recognition System",
   "header-profile": "Profile",
-  "header-logout": "Logout"
+  "header-logout": "Logout",
+  "menu-violation": "Violation",
+  "menu-lpr": "LPR",
+  "menu-live": "Live"
 }

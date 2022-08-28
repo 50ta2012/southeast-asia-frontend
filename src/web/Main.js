@@ -21,14 +21,14 @@ export function Main() {
         {titleText}
       </div>
       <div className="main-content">
-        <Router>
-          <Routes>
-            <Route path="/" element={<Violation />} />
-            <Route path="/lpr" element={<Lpr />} />
-            <Route path="/live" element={<Live />} />
-            <Route path="/profile" element={<UserProfile />} />
-          </Routes>
-        </Router>
+
+        <Routes>
+          <Route path="/" element={<Violation />} />
+          <Route path="/lpr" element={<Lpr />} />
+          <Route path="/live" element={<Live />} />
+          <Route path="/profile" element={<UserProfile />} />
+        </Routes>
+
       </div>
     </div>
   )

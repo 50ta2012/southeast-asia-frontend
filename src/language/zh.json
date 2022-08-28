@@ -1,5 +1,8 @@
 {
   "header-title": "東南亞車牌辨識系統",
   "header-profile": "個人資料",
-  "header-logout": "登出"
+  "header-logout": "登出",
+  "menu-violation": "違規記錄",
+  "menu-lpr": "車牌辨識",
+  "menu-live": "即時影像"
 }

@@ -1,11 +1,12 @@
-import "./css/header.css"
-import personSvg from "./image/person.svg"
-import globeSvg from "./image/globe.svg"
-import { FormattedMessage } from 'react-intl'
-import { useContext } from "react"
-import { LangContext } from "../App"
+import "./css/header.css";
+import personSvg from "./image/person.svg";
+import globeSvg from "./image/globe.svg";
+import { FormattedMessage } from 'react-intl';
+import { useContext } from "react";
+import { LangContext } from "../App";
 import messageInZh from "../language/zh.json";
 import messageInEn from "../language/en.json";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const { setLang } = useContext(LangContext);
@@ -14,7 +15,6 @@ export default function Header() {
     <div className="header">
       <div></div> {/* empty grid */}
       <div className="header-title">
-        {/* 東南亞車牌辨識系統 */}
         <FormattedMessage id="header-title" />
       </div>
       <div className="header-feature">
@@ -42,15 +42,13 @@ export default function Header() {
             <div className="person">
               <img src={personSvg} alt="" onClick={() => iconDropdown(".person")} />
               <div className="dropdown-content">
-                <a href="/profile">
-                  {/* 個人資料 */}
+                <Link to={"/profile"}>
                   <FormattedMessage id="header-profile" />
-                </a>
+                </Link>
                 <hr />
-                <a href="/logout">
-                  {/* 登出 */}
+                <Link to={"/logout"}>
                   <FormattedMessage id="header-logout" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
