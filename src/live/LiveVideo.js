@@ -40,22 +40,10 @@ function LiveVideo() {
   })
 
 
-  
-
-  // const onLoad = React.useCallback(function callback(map) {
-  //   const bounds = new window.google.maps.LatLngBounds(center);
-  //   markers.forEach(({ position }) => bounds.extend(position));
-  //   map.fitBounds(bounds);
-  //   //setMap(map)
-  // }, [])
-
-
-  // const onUnmount = React.useCallback(function callback(map) {
-  //   setMap(null)
-  // }, [])
-
-
-/////////////////////////////////////////////////////////////////////////
+  const OPTIONS = {
+    minZoom: 8,
+    maxZoom: 15,
+  }
 
   const [activeMarker, setActiveMarker] = useState(null);
 
@@ -77,10 +65,11 @@ function LiveVideo() {
   return isLoaded ? (
     
       <GoogleMap
-      
+        options = {OPTIONS}
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={50}
+        zoom={12}
+        //zoomControl:true
         onLoad={handleOnLoad}
       >
           {markers.map(({ id, name, position }) => (
@@ -101,17 +90,18 @@ function LiveVideo() {
             {activeMarker === id ? (
 
                <InfoWindow 
+               style={{ backgroundColor: 'red' }}
                 onCloseClick={() => setActiveMarker(null)} >
-                <div style={{ width: findByText, height: findByText }}>
-                
-                {/* show information */}
-                  <h2> {name} </h2>
+                <div >
+                  {/* <h2> {name} </h2> */}
                   <ReactHlsPlayer
                     src={source}
                     autoPlay={true}
+                    controls={true}
                     muted={true}
-                    width="20%"
-                    height="auto"
+                    width={500}
+                    height={375}
+                    
                   />
 
 
