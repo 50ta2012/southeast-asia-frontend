@@ -4,10 +4,10 @@
     "header-logout": "Đăng xuất",
     "menu-violation": "Vi phạm",
     "menu-lpr": "LPR",
-    "menu-live": "Trực tiếp",
+    "menu-live": "Live",
     "violation-title": "Vi phạm",
     "lpr-title": "LPR",
-    "live-title": "Trực tiếp",
+    "live-title": "Live",
     "profile-title": "Hồ sơ",
     "table-title": "Danh sách vi phạm",
     "table-th1": "Đánh số",
@@ -17,5 +17,8 @@
     "table-th5": "Loại ô tô",
     "table-th6": "Biển số",
     "table-th7": "khác",
-    "table-th8": "khác"
+    "table-th8": "khác",
+    "Img-btn": "Hình ảnh",
+    "Video-btn": "Video"
+
   }

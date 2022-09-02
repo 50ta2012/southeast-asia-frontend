@@ -2,6 +2,8 @@ import ReactTable from './table/ReactTable';
 import TableButton from './table/TableButton';
 import {useState , useEffect} from 'react';
 import { FormattedMessage } from 'react-intl';
+import ImgButton from './table/ImgButton';
+import VideoButton from './table/VideoButton';
 
 
 
@@ -46,11 +48,10 @@ const tableBody = (value, index) => {
       <td>{value.carType}</td>
       <td>{value.plateNumber}</td>
       <td>
-        <TableButton name = {"圖片"} imgPath = {value.imgPath} />
-        
+        <ImgButton imgPath = {value.imgPath}/>
       </td>
       <td>
-      <TableButton name = {"影片"} videoPath = {value.videoPath}/>
+      <VideoButton videoPath = {value.videoPath}/>
       </td>
       
     </tr>
