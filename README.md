@@ -5,6 +5,10 @@
 npm i
 
 yarn add react-hls-player
+
+or
+
+yarn install
 ```
 
 ## 啟動

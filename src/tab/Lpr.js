@@ -1,15 +1,20 @@
-import titleMap from "../web/title.json"
 import { HelmetProvider, Helmet } from "react-helmet-async";
+import { FormattedMessage, useIntl } from 'react-intl';
+import LPR from '../lpr/LPR'
 
 export default function Lpr() {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>{titleMap["/lpr"]}</title>
+        <title>
+          {useIntl().formatMessage({ id: "lpr-title" })}
+        </title>
       </Helmet>
-      <h2>
-        車牌辨識內容...
-      </h2>
+      <div className="main-title">
+        <FormattedMessage id="lpr-title"></FormattedMessage>
+      </div>
+
+     <LPR></LPR>
     </HelmetProvider>
   )
 }

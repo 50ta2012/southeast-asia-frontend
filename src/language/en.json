@@ -1,0 +1,12 @@
+{
+  "header-title": "Vehicle Recognition System",
+  "header-profile": "Profile",
+  "header-logout": "Logout",
+  "menu-violation": "Violation",
+  "menu-lpr": "LPR",
+  "menu-live": "Live",
+  "violation-title": "Violation",
+  "lpr-title": "LPR",
+  "live-title": "Live",
+  "profile-title": "Profile"
+}
