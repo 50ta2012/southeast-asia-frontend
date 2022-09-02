@@ -8,5 +8,14 @@
   "violation-title": "Violation",
   "lpr-title": "LPR",
   "live-title": "Live",
-  "profile-title": "Profile"
+  "profile-title": "Profile",
+  "table-title":"Violation List",
+  "table-th1":"No.",
+  "table-th2":"Location",
+  "table-th3":"Violation",
+  "table-th4":"Time",
+  "table-th5":"Car Type",
+  "table-th6":"License plate",
+  "table-th7":"More",
+  "table-th8":"More"
 }

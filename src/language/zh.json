@@ -8,5 +8,14 @@
   "violation-title": "違規記錄",
   "lpr-title": "車牌辨識",
   "live-title": "即時影像",
-  "profile-title": "個人資料"
+  "profile-title": "個人資料",
+  "table-title":"違規清單",
+  "table-th1":"編號",
+  "table-th2":"地點",
+  "table-th3":"事由",
+  "table-th4":"時間",
+  "table-th5":"車種",
+  "table-th6":"車牌",
+  "table-th7":"檢視",
+  "table-th8":"檢視"
 }

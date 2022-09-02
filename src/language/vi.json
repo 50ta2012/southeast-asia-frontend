@@ -1,0 +1,21 @@
+{
+    "header-title": "Hệ thống Nhận dạng Xe",
+    "header-profile": "Hồ sơ",
+    "header-logout": "Đăng xuất",
+    "menu-violation": "Vi phạm",
+    "menu-lpr": "LPR",
+    "menu-live": "Trực tiếp",
+    "violation-title": "Vi phạm",
+    "lpr-title": "LPR",
+    "live-title": "Trực tiếp",
+    "profile-title": "Hồ sơ",
+    "table-title": "Danh sách vi phạm",
+    "table-th1": "Đánh số",
+    "table-th2": "Vị trí",
+    "table-th3": "Vi phạm",
+    "table-th4": "Thời gian",
+    "table-th5": "Loại ô tô",
+    "table-th6": "Biển số",
+    "table-th7": "khác",
+    "table-th8": "khác"
+  }

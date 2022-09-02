@@ -1,0 +1,21 @@
+{
+    "header-title": "ระบบจดจำยานพาหนะ",
+    "header-profile": "ประวัติโดยย่อ",
+    "header-logout": "ออกจากระบบ",
+    "menu-violation": "ละเมิด",
+    "menu-lpr": "LPR",
+    "menu-live": "Live",
+    "violation-title": "ละเมิด",
+    "lpr-title": "LPR",
+    "live-title": "Live",
+    "profile-title": "ประวัติโดยย่อ",
+    "table-title":"รายการละเมิด",
+    "table-th1":"เลขที่",
+    "table-th2":"ที่ตั้ง",
+    "table-th3":"ละเมิด",
+    "table-th4":"เวลา",
+    "table-th5":"ประเภท",
+    "table-th6":"ป้ายทะเบียนรถ",
+    "table-th7":"อีก",
+    "table-th8":"อีก"
+  }

@@ -6,6 +6,8 @@ import { useContext } from "react";
 import { LangContext } from "../App";
 import messageInZh from "../language/zh.json";
 import messageInEn from "../language/en.json";
+import messageInTh from "../language/th.json";
+import messageInVi from "../language/vi.json";
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -36,7 +38,20 @@ export default function Header() {
                     locale: "zh"
                   });
                 }}>中文 (繁)</div>
+                <div onClick={() => {
+                  setLang({
+                    message: messageInTh,
+                    locale: "th"
+                  });
+                }}>ไทย</div>
+                <div onClick={() => {
+                  setLang({
+                    message: messageInVi,
+                    locale: "vi"
+                  });
+                }}>Tiếng Việt</div>
               </div>
+              
             </div>
 
             <div className="person">
