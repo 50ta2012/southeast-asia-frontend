@@ -31,8 +31,10 @@ function MakeReactTable(props) {
 
     const { active } = useContext(ActiveContext);
     const index = active - 1;
-
-    return partTableData[index].map(props.tableBody);
+    if (partTableData.length > 0) {
+      return partTableData[index].map(props.tableBody);
+    }
+    
   }
 
   const MakePaginationItem = (props) => {
