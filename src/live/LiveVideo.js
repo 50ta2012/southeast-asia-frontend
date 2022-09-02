@@ -6,11 +6,8 @@ import ReactHlsPlayer from "react-hls-player";
 //import mp4 from './1.mp4';
 //import camera from './video-camera.svg';
 
-
 //import ShowLargeImage from './ShowLargeImage';
 import markers from './markers.json'
-import { findByText } from '@testing-library/react';
-
 
 
 
