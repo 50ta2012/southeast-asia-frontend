@@ -1,0 +1,18 @@
+
+.titleCloseBtn{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .titleCloseBtn button{
+    background-color:honeydew;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+  }
+  /*
+  .modalContainer > img:hover {
+    width: 500px;
+    height: 200px;
+  }
+  */
+  
