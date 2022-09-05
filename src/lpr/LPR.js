@@ -5,9 +5,9 @@ import ShowImage from "./ShowImage";
 
 
 
-// const source = "https://twowayiotse.ddns.net/stream/cam2/index.m3u8";
-// const source_ptz = "https://twowayiotse.ddns.net/stream/cam1/index.m3u8";
-// const url = "https://twowayiotse.ddns.net/violation/all";
+// const source = "https://twowayiot.com/stream/cam2/index.m3u8";
+// const source_ptz = "https://twowayiot.com/stream/cam1/index.m3u8";
+// const url = "https://twowayiot.com/violation/all";
 
 
 
@@ -19,7 +19,7 @@ export default function LPR() {
   useEffect(() => {
 
     (async () => {
-      const data = await fetch('https://twowayiotse.ddns.net/violation/all')
+      const data = await fetch('https://twowayiot.com/violation/all')
       const response = await data.json();
   
         console.log('原始資料');

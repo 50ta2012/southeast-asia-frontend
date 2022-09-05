@@ -26,7 +26,7 @@ const center = {
 function LiveVideo() {
 
 
-  const source = "https://twowayiotse.ddns.net/stream/cam2/index.m3u8";
+  const source = "https://twowayiot.com/stream/cam2/index.m3u8";
 
   //const [showImg, setShowImg] = useState(false)
 

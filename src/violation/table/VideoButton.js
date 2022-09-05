@@ -26,7 +26,7 @@ function VideoButton(props) {
 return <>
     <button type="button" className="btn btn-primary btn-option" onClick={showModal}><FormattedMessage id="Video-btn" /></button>
     <Modal title={<FormattedMessage id="Video-btn" />} centered width={1000} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-      <Player src={`https://twowayiotse.ddns.net/${videoPath}`} />
+      <Player src={`https://twowayiot.com/${videoPath}`} />
 		</Modal>
             </>
 }

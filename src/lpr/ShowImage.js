@@ -5,10 +5,10 @@ export default function ShowImage({data,setData,index}) {
 
     const [showImg, setShowImg] = useState(false)
 
-    let imgsrc = "https://twowayiotse.ddns.net/"+data[index].imgPath
+    let imgsrc = "https://twowayiot.com/"+data[index].imgPath
     return (
         <div>
-        <img src={`https://twowayiotse.ddns.net/${data[index].imgPath}`}  alt="" width={500} height={375}
+        <img src={`https://twowayiot.com/${data[index].imgPath}`}  alt="" width={500} height={375}
             onClick={
               () => {
               setShowImg(true);

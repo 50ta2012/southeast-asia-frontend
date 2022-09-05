@@ -31,12 +31,12 @@ export default function TableButton (props){
 					return <div> 
 						
 						<Modal title={"組圖"} centered width={1000} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-							<Image src={`https://twowayiotse.ddns.net/${imgPath}`} width={960} height={540} />
+							<Image src={`https://twowayiot.com/${imgPath}`} width={960} height={540} />
 						</Modal></div>
 			}	else if (name === "影片"){
 				return <div>
 					  <Modal title={"影片"} centered width={1000} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-            <Player src={`https://twowayiotse.ddns.net/${videoPath}`} />
+            <Player src={`https://twowayiot.com/${videoPath}`} />
           </Modal>
 				</div>;
 			}

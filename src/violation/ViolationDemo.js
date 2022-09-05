@@ -66,7 +66,7 @@ export default function ViolationDemo() {
     
 
     (async () => {
-      const data = await fetch('https://twowayiotse.ddns.net/violation/all')
+      const data = await fetch('https://twowayiot.com/violation/all')
       const res = await data.json();
       // setPost(res);
       console.log(res);
