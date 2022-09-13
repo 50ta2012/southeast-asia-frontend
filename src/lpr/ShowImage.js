@@ -1,20 +1,24 @@
-import React, { useState } from 'react'
-import ShowLargeImage from './ShowLargeImage';
+import React, { useState } from "react";
+import ShowLargeImage from "./ShowLargeImage";
+import "./ShowImage.css";
 
-export default function ShowImage({data,setData,index}) {
+export default function ShowImage({ data, setData, index }) {
+  const [showImg, setShowImg] = useState(false);
 
-    const [showImg, setShowImg] = useState(false)
-
-    let imgsrc = "https://twowayiot.com/"+data[index].imgPath
-    return (
-        <div>
-        <img src={`https://twowayiot.com/${data[index].imgPath}`}  alt="" width={500} height={375}
-            onClick={
-              () => {
-              setShowImg(true);
-              }
-            } />
-           {showImg && <ShowLargeImage setShowImg={setShowImg} img={imgsrc}/>}
-      </div>
-    )
+  let imgsrc = "https://twowayiot.com" + data[index].imagePath;
+  return (
+    <div>
+      <img
+        className="img-grid"
+        src={`https://twowayiot.com${data[index].imagePath}`}
+        alt=""
+        onClick={() => {
+          setShowImg(true);
+        }}
+      />
+      {showImg && (
+        <ShowLargeImage key={index} setShowImg={setShowImg} img={imgsrc} />
+      )}
+    </div>
+  );
 }
