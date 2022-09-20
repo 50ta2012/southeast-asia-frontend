@@ -136,7 +136,7 @@ function MakeReactTable(props) {
       </Table>
       <Pagination>
         <MakePaginationItem size={
-          tableData.length % sizePerPage === 0 ? tableData.length / sizePerPage : tableData.length / sizePerPage + 1
+          tableData.length % sizePerPage === 0 ? tableData.length / sizePerPage : Math.floor(tableData.length / sizePerPage) + 1
         } />
       </Pagination>
     </>
