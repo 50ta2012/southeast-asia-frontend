@@ -10,7 +10,9 @@ import { IntlProvider } from "react-intl";
 import React, { useContext } from 'react';
 import { LangContext } from "../App";
 
-import {  BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "../tab/Login";
+import Regis from "../tab/Regis";
 
 export default function Root() {
   const { lang } = useContext(LangContext);
@@ -19,9 +21,31 @@ export default function Root() {
     <IntlProvider messages={lang.message} locale={lang.locale}>
       <div className="root-container">
         <Router>
-          <Header />
-          <Menu />
-          <Main />
+          <Routes>
+            <Route path="*" element={
+              <>
+                <Header />
+                <Menu />
+                <Main />
+              </>
+            } />
+            {/* {["/", "/profile", "/logout", "/lpr", "/live"].map((path, index) => {
+              return (
+                <Route path={path} element={
+                  <>
+                    <Header />
+                    <Menu />
+                    <Main />
+                  </>
+                }
+                  key={index}
+                />
+              );
+            })} */}
+
+            <Route path="/login" element={<Login />} />
+            <Route path="/regis" element={<Regis />} />
+          </Routes>
         </Router>
       </div>
     </IntlProvider>

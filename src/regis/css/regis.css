@@ -1,0 +1,37 @@
+.regis-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: max-content auto;
+}
+
+.regis-container>.regis-form>.regis-header {
+  text-align: center;
+}
+
+.regis-container>.regis-form>.regis-header> h1 {
+  margin-top: 8%;
+}
+
+.regis-body {
+  border: 1px solid #ccc!important;
+  border-radius: 16px;
+  padding: 15px;
+  max-width: 500px;
+  height: max-content;
+  margin: auto;
+}
+
+.regis-container .form-group{
+  margin-bottom: 15px;
+}
+
+.regis-link{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.regis-container a, .regis-container a:hover {
+  text-decoration: none;
+  color: #212529;
+}

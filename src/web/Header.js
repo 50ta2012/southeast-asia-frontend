@@ -51,7 +51,7 @@ export default function Header() {
                   });
                 }}>Tiếng Việt</div>
               </div>
-              
+
             </div>
 
             <div className="person">
@@ -91,9 +91,11 @@ function dropContentEvent(target, event) {
   const imgEle = document.querySelector(`.root-container .header-dropdown ${target} img`);
   const dropContentEle = document.querySelector(`.root-container .header-dropdown ${target} .dropdown-content`);
 
-  const style = window.getComputedStyle(dropContentEle);
+  if (dropContentEle !== null) {
+    const style = window.getComputedStyle(dropContentEle);
 
-  if (style.getPropertyValue("display") === "block" && !imgEle.contains(event.target) && !dropContentEle.contains(event.target)) {
-    dropContentEle.style.display = "none";
+    if (style.getPropertyValue("display") === "block" && !imgEle.contains(event.target) && !dropContentEle.contains(event.target)) {
+      dropContentEle.style.display = "none";
+    }
   }
 }
