@@ -8,7 +8,7 @@ export default function Regis(){
     <HelmetProvider>
       <Helmet>
         <title>
-          {useIntl().formatMessage({ id: "login-title" })}
+          {useIntl().formatMessage({ id: "regis-title" })}
         </title>
       </Helmet>
 
