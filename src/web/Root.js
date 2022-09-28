@@ -29,19 +29,6 @@ export default function Root() {
                 <Main />
               </>
             } />
-            {/* {["/", "/profile", "/logout", "/lpr", "/live"].map((path, index) => {
-              return (
-                <Route path={path} element={
-                  <>
-                    <Header />
-                    <Menu />
-                    <Main />
-                  </>
-                }
-                  key={index}
-                />
-              );
-            })} */}
 
             <Route path="/login" element={<Login />} />
             <Route path="/regis" element={<Regis />} />
