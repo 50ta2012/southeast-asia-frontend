@@ -128,8 +128,10 @@ export default function RegisPage() {
         token: token
       }
 
+      const serverUrl = "https://twowayiot.com";
+
       try {
-        const res = await fetch("http://localhost:18000/account/add", {
+        const res = await fetch(`${serverUrl}/account/add`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
