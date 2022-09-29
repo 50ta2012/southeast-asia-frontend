@@ -2,8 +2,50 @@
 import "./css/regis.css";
 import Modal from 'react-bootstrap/Modal';
 import { useState } from "react";
+import globeSvg from "../web/image/globe.svg";
+import { FormattedMessage, useIntl } from 'react-intl';
+import { useContext } from "react";
+import { LangContext } from "../App";
+import messageInZh from "../language/zh.json";
+import messageInEn from "../language/en.json";
+import messageInTh from "../language/th.json";
+import messageInVi from "../language/vi.json";
+import { Link } from "react-router-dom";
 
 export default function RegisPage() {
+  /* Language Select */
+  const { lang, setLang } = useContext(LangContext);
+  const handleLangSelect = (value) => {
+    switch (value) {
+      case "en":
+        setLang({
+          message: messageInEn,
+          locale: "en"
+        });
+        break;
+      case "zh":
+        setLang({
+          message: messageInZh,
+          locale: "zh"
+        });
+        break;
+      case "th":
+        setLang({
+          message: messageInTh,
+          locale: "th"
+        });
+        break;
+      case "vi":
+        setLang({
+          message: messageInVi,
+          locale: "vi"
+        });
+        break;
+      default:
+        break;
+    }
+  }
+
   /* Bootstrap Modal */
   const [errorModal, setErrorModal] = useState(false);
   const errorShow = () => setErrorModal(true);
@@ -96,7 +138,7 @@ export default function RegisPage() {
         });
 
         const response = await res.json();
-        
+
         if (response.status === "error") {
           const errorMessage = [];
 
@@ -116,11 +158,11 @@ export default function RegisPage() {
 
           setErrorModalMessage(errorElements);
           errorShow();
-        }else{
+        } else {
           allInputClear();
           successShow();
         }
-        
+
       } catch (err) {
         // Reset password input
         document.getElementById("password").value = "";
@@ -139,40 +181,83 @@ export default function RegisPage() {
         <div className="regis-form">
           <div className="regis-header">
             <h1>
-              東南亞車牌辨識系統
+              <FormattedMessage id="header-title" />
             </h1>
           </div>
           <div className="regis-body">
             <div className="form-group">
-              <label>姓名</label>
-              <input type="text" className="form-control" id="displayName" name="displayName" placeholder="請輸入姓名" />
+              <label>
+                <FormattedMessage id="regis-label-name" />
+              </label>
+              <input type="text" className="form-control" id="displayName" name="displayName" placeholder={
+                useIntl().formatMessage({ id: "regis-holder-name" })
+              } />
             </div>
             <div className="form-group">
-              <label>帳號</label>
-              <input type="text" className="form-control" id="username" name="username" placeholder="請輸入帳號" />
-              <small className="form-text">* 至少 4 碼，由小寫英文字母和數字組成</small>
+              <label>
+                <FormattedMessage id="regis-label-username" />
+              </label>
+              <input type="text" className="form-control" id="username" name="username" placeholder={
+                useIntl().formatMessage({ id: "regis-holder-username" })
+              } />
+              <small className="form-text">
+                <FormattedMessage id="regis-username-hint" />
+              </small>
             </div>
             <div className="form-group">
-              <label>密碼</label>
-              <input type="password" className="form-control" id="password" name="password" placeholder="請輸入密碼" />
-              <small className="form-text">* 至少 8 碼，最少有一個英文字母和數字</small>
+              <label>
+                <FormattedMessage id="regis-label-password" />
+              </label>
+              <input type="password" className="form-control" id="password" name="password" placeholder={
+                useIntl().formatMessage({ id: "regis-holder-password" })
+              } />
+              <small className="form-text">
+                <FormattedMessage id="regis-password-hint" />
+              </small>
             </div>
             <div className="form-group">
-              <label>確認密碼</label>
-              <input type="password" className="form-control" id="password-confirm" name="password-confirm" placeholder="請輸入確認密碼" />
+              <label>
+                <FormattedMessage id="regis-label-confirm-password" />
+              </label>
+              <input type="password" className="form-control" id="password-confirm" name="password-confirm" placeholder={
+                useIntl().formatMessage({ id: "regis-holder-confirm-password" })
+              } />
             </div>
             <div className="form-group">
-              <label>驗證碼</label>
-              <input type="password" className="form-control" id="token" name="token" placeholder="請輸入驗證碼" />
+              <label>
+                <FormattedMessage id="regis-label-token" />
+              </label>
+              <input type="password" className="form-control" id="token" name="token" placeholder={
+                useIntl().formatMessage({ id: "regis-holder-token" })
+              } />
             </div>
 
             <div className="form-button d-grid mb-4">
-              <button className="btn btn-dark" onClick={submit}>註冊</button>
+              <button className="btn btn-dark" onClick={submit}>
+                <FormattedMessage id="regis-submit" />
+              </button>
             </div>
 
             <div className="regis-link">
-              <img src="/svg/arrow-counterclockwise.svg" alt="" height="18" width="18" />
-              <a href="/">回首頁</a>
+              <div></div>
+              <div>
+                <img src="/svg/arrow-counterclockwise.svg" alt="" height="18" width="18" />
+                <Link to={"/login"}>
+                  <FormattedMessage id="regis-return" />
+                </Link>
+              </div>
+              <div>
+                <img src={globeSvg} alt="" height="18" width="18" />
+                <span style={{ margin: "0px 3px" }}>
+                  <FormattedMessage id="login-language" />
+                </span>
+                <select defaultValue={lang.locale} onChange={(e) => { handleLangSelect(e.target.value) }}>
+                  <option value={"en"}>English</option>
+                  <option value={"zh"}>中文 (繁)</option>
+                  <option value={"th"}>ไทย</option>
+                  <option value={"vi"}>Tiếng Việt</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>

@@ -25,7 +25,12 @@
   margin-bottom: 15px;
 }
 
-.regis-link{
+.regis-link {
+  display: grid;
+  grid-template-columns: 33% auto auto;
+}
+
+.regis-link > div {
   display: flex;
   justify-content: right;
   align-items: center;
