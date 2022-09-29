@@ -16,6 +16,28 @@ export default function RegisPage() {
   /* Modal Message */
   const [errorModalMessage, setErrorModalMessage] = useState("");
 
+  /* Format Validation */
+  function validateUsername(username) {
+    const reg = /[a-z0-9]{4}/;
+
+    return reg.test(username);
+  }
+
+  function validatePassword(password = "") {
+    const reg = /(?=.*[0-9])(?=.*[a-zA-Z]){8}/;
+
+    return reg.test(password);
+  }
+
+  /* Clear Input */
+  function allInputClear() {
+    document.getElementById("displayName").value = "";
+    document.getElementById("token").value = "";
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+    document.getElementById("password-confirm").value = "";
+  }
+
   /* Submit Process */
   const submit = async () => {
     const displayName = document.getElementById("displayName").value;
@@ -24,28 +46,91 @@ export default function RegisPage() {
     const passwordConfirm = document.getElementById("password-confirm").value;
     const token = document.getElementById("token").value;
 
-    const postData = {
-      displayName: displayName,
-      username: username,
-      password: password,
-      token: token
-    }
-
-    try{
-      const res = await fetch("http://localhost:18000/account/add", {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(postData)
-      });
-
-      successShow();
-    }catch(err){
-      setErrorModalMessage("請求發生錯誤，請連絡系統管理員");
+    if (displayName === "" || username === "" || password === "" || passwordConfirm === "" || token === "") {
+      setErrorModalMessage("所有欄位都不可空白");
       errorShow();
-      console.log(err);
-    }  
+
+      return;
+    } else if (!validateUsername(username) || !validatePassword(password) || password !== passwordConfirm) {
+
+      const errorMessage = [];
+
+      if (!validateUsername(username)) {
+        errorMessage.push("帳號至少 4 碼，由小寫英文字母和數字組成");
+      }
+
+      if (!validatePassword(password)) {
+        errorMessage.push("密碼至少 8 碼，最少有一個英文字母和數字");
+      }
+
+      if (password !== passwordConfirm) {
+        errorMessage.push("密碼不相符");
+      }
+
+      const errorElements = errorMessage.map((value, index) => <p key={index}>{value}</p>);
+
+      // Reset password input
+      document.getElementById("password").value = "";
+      document.getElementById("password-confirm").value = "";
+
+      setErrorModalMessage(errorElements);
+      errorShow();
+
+      return;
+    } else {
+      /* 所有輸入欄位正確，送出註冊請求 */
+      const postData = {
+        displayName: displayName,
+        username: username,
+        password: password,
+        token: token
+      }
+
+      try {
+        const res = await fetch("http://localhost:18000/account/add", {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(postData)
+        });
+
+        const response = await res.json();
+        
+        if (response.status === "error") {
+          const errorMessage = [];
+
+          if (response?.username === "existed") {
+            errorMessage.push("帳號重覆");
+          }
+
+          if (response?.token === "mismatched") {
+            errorMessage.push("驗證碼錯誤");
+          }
+
+          const errorElements = errorMessage.map((value, index) => <p key={index}>{value}</p>);
+
+          // Reset password input
+          document.getElementById("password").value = "";
+          document.getElementById("password-confirm").value = "";
+
+          setErrorModalMessage(errorElements);
+          errorShow();
+        }else{
+          allInputClear();
+          successShow();
+        }
+        
+      } catch (err) {
+        // Reset password input
+        document.getElementById("password").value = "";
+        document.getElementById("password-confirm").value = "";
+
+        setErrorModalMessage("請求發生錯誤，請連絡系統管理員");
+        errorShow();
+        console.log(err);
+      }
+    }
   }
 
   return (

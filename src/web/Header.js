@@ -87,9 +87,9 @@ export default function Header() {
                   <FormattedMessage id="header-profile" />
                 </Link>
                 <hr />
-                <Link to={"/logout"}>
+                <a href="/logout">
                   <FormattedMessage id="header-logout" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
