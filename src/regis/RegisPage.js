@@ -128,7 +128,8 @@ export default function RegisPage() {
         token: token
       }
 
-      const serverUrl = "https://twowayiot.com";
+      // const serverUrl = "https://twowayiot.com";
+      const serverUrl = window.location.origin;
 
       try {
         const res = await fetch(`${serverUrl}/account/add`, {
