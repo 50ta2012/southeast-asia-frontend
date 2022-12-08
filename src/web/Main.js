@@ -7,6 +7,7 @@ import {
   Route
 } from "react-router-dom";
 import UserProfile from "../tab/UserProfile";
+import Thailand from "../tab/Thailand";
 
 export function Main() {
   return (
@@ -17,6 +18,7 @@ export function Main() {
           <Route path="/lpr" element={<Lpr />} />
           <Route path="/live" element={<Live />} />
           <Route path="/profile" element={<UserProfile />} />
+          <Route path="/thailand" element={<Thailand />} />
         </Routes>
       </div>
     </div>

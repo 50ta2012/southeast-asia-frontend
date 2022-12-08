@@ -42,5 +42,7 @@
   "regis-holder-username": "Input account",
   "regis-username-hint": "* At least 4 characters & Character and number only",
   "regis-label-name": "Display Name",
-  "regis-holder-name": "Input display name"
+  "regis-holder-name": "Input display name",
+
+  "thailand-title": "Thailand LPR"
 }

@@ -49,7 +49,7 @@ export default function LoginPage() {
   const password = useRef();
 
   const loginSubmit = async () => {
-    const csrfToken = document.cookie.replace(/(?:(?:^|.*;\s*)XSRF-TOKEN\s*\=\s*([^;]*).*$)|^.*$/, '$1');
+    const csrfToken = document.cookie.replace(/(?:(?:^|.*;\s*)XSRF-TOKEN\s*=\s*([^;]*).*$)|^.*$/, '$1');
 
     const formData = new FormData();
     formData.append("username", username.current.value);
@@ -62,7 +62,7 @@ export default function LoginPage() {
       });
 
       if( res.status === 200 ){
-        window.location.href = "https://twowayiot.com";
+        window.location.href = "/";
       }
     }catch(err){
       console.error(err);

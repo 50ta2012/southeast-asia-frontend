@@ -34,6 +34,15 @@ export default function Menu() {
             </Link>
           </div>
         </li>
+        <li className="nav-item">
+          <div className="nav-link">
+            <Link to={"/thailand"}>
+              <div className="nav-text">
+                <FormattedMessage id="thailand-title" />  
+              </div>
+            </Link>
+          </div>
+        </li>
       </ul>
 
     </div>
