@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { FormattedMessage, useIntl } from 'react-intl';
+import thaiDemoImage from '../thai/img/demo_001.jpg';
 
 function ThaiTitle() {
 	// 獨立 Component，避免 Re-render
@@ -17,7 +18,8 @@ export default function Thailand() {
 				<FormattedMessage id="thailand-title"></FormattedMessage>
 			</div>
 			<div style={{display: "flex", justifyContent: "center"}}>
-				<iframe title='thailand-lpr-demo' width="1120" height="630" src={`https://www.youtube.com/embed/tgbNymZ7vqY`} />
+				{/* <iframe title='thailand-lpr-demo' width="1120" height="630" src={`https://www.youtube.com/embed/tgbNymZ7vqY`} /> */}
+				<img src={thaiDemoImage} alt={"Thailand Lpr Demo"} height="630"/>
 			</div>
 		</>
 	);
