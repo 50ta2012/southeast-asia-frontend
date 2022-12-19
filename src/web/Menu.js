@@ -69,6 +69,7 @@ export default function Menu() {
             <Link to={"/access_control"}>
               <div className="nav-text">
                 <FormattedMessage id="access_control" />
+
               </div>
             </Link>
           </div>

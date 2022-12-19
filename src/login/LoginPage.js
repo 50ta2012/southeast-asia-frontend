@@ -2,7 +2,7 @@
 import "./css/login.css";
 import globeSvg from "../web/image/globe.svg";
 import { FormattedMessage, useIntl } from 'react-intl';
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { LangContext } from "../App";
 import messageInZh from "../language/zh.json";
 import messageInEn from "../language/en.json";
@@ -45,6 +45,30 @@ export default function LoginPage() {
     }
   }
 
+  const username = useRef();
+  const password = useRef();
+
+  const loginSubmit = async () => {
+    const csrfToken = document.cookie.replace(/(?:(?:^|.*;\s*)XSRF-TOKEN\s*=\s*([^;]*).*$)|^.*$/, '$1');
+
+    const formData = new FormData();
+    formData.append("username", username.current.value);
+    formData.append("password", password.current.value);
+    try{
+      const res = await fetch("/login", {
+        method: "POST",
+        body: formData,
+        headers: { 'X-XSRF-TOKEN': csrfToken }
+      });
+
+      if( res.status === 200 ){
+        window.location.href = "/";
+      }
+    }catch(err){
+      console.error(err);
+    }
+  }
+
   return (
     <div className="login-container">
       <div className="login-form">
@@ -54,12 +78,12 @@ export default function LoginPage() {
           </h1>
         </div>
         <div className="login-body">
-          <form action="/login" method="post">
+          {/* <form action="/login" method="post"> */}
             <div className="form-group mb-3">
               <label>
                 <FormattedMessage id="login-label-account" />
               </label>
-              <input type="text" className="form-control" id="username" name="username" placeholder={
+              <input ref={username} type="text" className="form-control" id="username" name="username" placeholder={
                 useIntl().formatMessage({ id: "login-holder-account" })
               } />
             </div>
@@ -67,12 +91,12 @@ export default function LoginPage() {
               <label>
                 <FormattedMessage id="login-label-password" />
               </label>
-              <input type="password" className="form-control" id="password" name="password" placeholder={
+              <input ref={password} type="password" className="form-control" id="password" name="password" placeholder={
                 useIntl().formatMessage({ id: "login-holder-password" })
               } />
             </div>
             <div className="form-button d-grid mb-3">
-              <button className="btn btn-dark">
+              <button className="btn btn-dark" onClick={() => {loginSubmit()}}>
                 <FormattedMessage id="login-button" />
               </button>
             </div>
@@ -97,7 +121,7 @@ export default function LoginPage() {
                 </select>
               </div>
             </div>
-          </form>
+          {/* </form> */}
         </div>
       </div>
     </div>

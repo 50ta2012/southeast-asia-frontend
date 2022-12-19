@@ -130,12 +130,14 @@ export default function RegisPage() {
 
       // const serverUrl = "https://twowayiot.com";
       const serverUrl = window.location.origin;
+      const csrfToken = document.cookie.replace(/(?:(?:^|.*;\s*)XSRF-TOKEN\s*=\s*([^;]*).*$)|^.*$/, '$1');
 
       try {
         const res = await fetch(`${serverUrl}/account/add`, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'X-XSRF-TOKEN': csrfToken 
           },
           body: JSON.stringify(postData)
         });

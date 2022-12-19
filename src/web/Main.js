@@ -13,6 +13,7 @@ import {
   Route
 } from "react-router-dom";
 import UserProfile from "../tab/UserProfile";
+import Thailand from "../tab/Thailand";
 
 export function Main() {
   return (
@@ -29,6 +30,7 @@ export function Main() {
           <Route path="/access_control" element={<AccessControl />} />
 
           <Route path="/profile" element={<UserProfile />} />
+          <Route path="/thailand" element={<Thailand />} />
         </Routes>
       </div>
     </div>
