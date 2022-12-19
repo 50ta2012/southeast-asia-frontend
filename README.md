@@ -1,14 +1,11 @@
 # 東南亞車牌辨識系統
 
+## Requirement
+* nodejs 18+
+
 ## 安裝
 ```
-npm i
-
-yarn add react-hls-player
-
-or
-
-yarn install
+yarn add package.json
 ```
 
 ## 啟動
