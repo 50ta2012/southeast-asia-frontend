@@ -34,6 +34,45 @@ export default function Menu() {
             </Link>
           </div>
         </li>
+
+
+        
+        <li className="nav-item">
+          <div className="nav-link">
+            <Link to={"/thai_plate"}>
+              <div className="nav-text">
+                <FormattedMessage id="thai_plate" />
+              </div>
+            </Link>
+          </div>
+        </li>
+        <li className="nav-item">
+          <div className="nav-link">
+            <Link to={"/parking_record"}>
+              <div className="nav-text">
+                <FormattedMessage id="parking_record" />
+              </div>
+            </Link>
+          </div>
+        </li>
+        <li className="nav-item">
+          <div className="nav-link">
+            <Link to={"/green_red_light"}>
+              <div className="nav-text">
+                <FormattedMessage id="green_red_light" />
+              </div>
+            </Link>
+          </div>
+        </li>
+        <li className="nav-item">
+          <div className="nav-link">
+            <Link to={"/access_control"}>
+              <div className="nav-text">
+                <FormattedMessage id="access_control" />
+              </div>
+            </Link>
+          </div>
+        </li>
       </ul>
 
     </div>

@@ -42,5 +42,11 @@
     "regis-holder-username": "ป้อนข้อมูลบัญชี",
     "regis-username-hint": "* อย่างน้อย 4 ตัวอักษร & อักขระและตัวเลขเท่านั้น",
     "regis-label-name": "ชื่อที่แสดง",
-    "regis-holder-name": "ป้อนชื่อที่แสดง"
+    "regis-holder-name": "ป้อนชื่อที่แสดง",
+
+    "thai_plate":"จานไทย",
+    "parking_record":"บันทึกที่จอดรถ",
+    "green_red_light":"สีเขียว_สีแดง_แสง",
+    "access_control":"การควบคุมการเข้าถึง",
+    "Img-btn-big":"ภาพขนาดใหญ่"
   }

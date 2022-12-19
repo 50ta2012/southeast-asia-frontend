@@ -42,5 +42,11 @@
   "regis-holder-username": "Input account",
   "regis-username-hint": "* At least 4 characters & Character and number only",
   "regis-label-name": "Display Name",
-  "regis-holder-name": "Input display name"
+  "regis-holder-name": "Input display name",
+
+  "thai_plate":"thai_plate",
+  "parking_record":"parking_record",
+  "green_red_light":"green_red_light",
+  "access_control":"access_control",
+  "Img-btn-big":"large_image"
 }

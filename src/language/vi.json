@@ -42,5 +42,11 @@
     "regis-holder-username": "Tài khoản đầu vào",
     "regis-username-hint": "* Ít nhất 4 ký tự & Chỉ ký tự và số",
     "regis-label-name": "Tên hiển thị",
-    "regis-holder-name": "Nhập tên hiển thị"
+    "regis-holder-name": "Nhập tên hiển thị",
+
+    "thai_plate":"tấm thái",
+    "parking_record":"hồ sơ đỗ xe",
+    "green_red_light":"xanh_đỏ_đèn",
+    "access_control":"kiểm soát truy cập",
+    "Img-btn-big":"hình ảnh lớn"
   }

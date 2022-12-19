@@ -27,7 +27,7 @@ export default function ShowImage({ data, index }) {
       <Modal
         title={<FormattedMessage id="Img-btn" />}
         centered
-        width="70%"
+        width="50%"
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
