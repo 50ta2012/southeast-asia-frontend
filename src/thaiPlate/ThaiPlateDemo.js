@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 import ImgButton from "../table/ImgButton";
 
 
-import testjson from '../test.json'
+import testjson from '../thaiplate.json'
 import { Modal, Image } from 'antd';
 import 'antd/dist/antd.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -55,7 +55,8 @@ const TableHeader = () => {
 const tableBody = (value, index) => {
   return (
     <tr key={index}>
-      <td><img src={value.plateImg} max-width={100}/></td>
+      {/* <td><img src={value.plateImg} max-width={100}/></td> */}
+      <td><img src={value.plateImg} width="100" /></td>
       <td>{value.ID}</td>
       <td>{value.RoadName}</td>
       <td>{value.EventDatetime}</td>
