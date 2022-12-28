@@ -1,0 +1,29 @@
+.reserv-container{
+  max-width: 30%;
+  margin-bottom: 10px;
+}
+
+.reserv-group{
+  display: flex;
+  align-items: center;
+  min-height: 3rem;
+}
+
+button.btn.btn-dark {
+  background-color: #001528;
+}
+
+.form-title.col-3 {
+  font-size: small;
+}
+
+select.form-control {
+  font-size: small;
+}
+input.form-control {
+  font-size: small;
+}
+
+/* .active>.page-link, .page-link.active {
+  background-color: #263664;
+} */

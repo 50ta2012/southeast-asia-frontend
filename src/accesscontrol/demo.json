@@ -1,0 +1,22 @@
+[
+  {
+      "name":"測試一",
+      "unit": "NCKU",           
+      "allowType": "訪客",          
+      "note" : "備註",      
+      "visitorStartStr" : "2022-02-10",
+      "visitorEndStr" : "2022-02-10",      
+      "plateNumber":"ABC-2627"
+
+  },
+  {
+    "name":"測試二",
+    "unit": "NCKU",           
+    "allowType": "訪客",          
+    "note" : "備註",      
+    "visitorStartStr" : "2022-02-10",
+    "visitorEndStr" : "2022-02-10",      
+    "plateNumber":"ABC-2627"
+
+}
+]
