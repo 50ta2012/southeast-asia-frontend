@@ -1,0 +1,68 @@
+[
+	{
+		"id" : 2,
+		"camera_id" : "cam1",
+		"image_path" : "/tpeib_demoImg/20221231_070220636_ANN-2060.jpg",
+		"name" : "葉志煌",
+		"pass_status" : "員工",
+		"plate_number" : "ANN-2060",
+		"recognition_time" : "2022-12-31 07:02:20.636000",
+		"recognition_time_str" : "2022-12-31 07:02:20.636",
+		"vehicle_type" : ""
+	},
+	{
+		"id" : 10,
+		"camera_id" : "cam1",
+		"image_path" : "/tpeib_demoImg/20221231_082120267_AXE-9935.jpg",
+		"name" : "王雅芳",
+		"pass_status" : "員工",
+		"plate_number" : "AXE-9935",
+		"recognition_time" : "2022-12-31 08:21:20.267000",
+		"recognition_time_str" : "2022-12-31 08:21:20.267",
+		"vehicle_type" : ""
+	},
+	{
+		"id" : 13,
+		"camera_id" : "cam1",
+		"image_path" : "/tpeib_demoImg/20221231_091929436_ARG-6615.jpg",
+		"name" : "郭俊宏",
+		"pass_status" : "員工",
+		"plate_number" : "ARG-6615",
+		"recognition_time" : "2022-12-31 09:19:29.436000",
+		"recognition_time_str" : "2022-12-31 09:19:29.436",
+		"vehicle_type" : ""
+	},
+	{
+		"id" : 30,
+		"camera_id" : "cam1",
+		"image_path" : "/tpeib_demoImg/20221231_144516716_BQL-5091.jpg",
+		"name" : "闞永超",
+		"pass_status" : "員工",
+		"plate_number" : "BQL-5091",
+		"recognition_time" : "2022-12-31 14:45:16.716000",
+		"recognition_time_str" : "2022-12-31 14:45:16.716",
+		"vehicle_type" : ""
+	},
+	{
+		"id" : 38,
+		"camera_id" : "cam1",
+		"image_path" : "/tpeib_demoImg/20221231_154836811_ARG-6615.jpg",
+		"name" : "郭俊宏",
+		"pass_status" : "員工",
+		"plate_number" : "ARG-6615",
+		"recognition_time" : "2022-12-31 15:48:36.811000",
+		"recognition_time_str" : "2022-12-31 15:48:36.811",
+		"vehicle_type" : ""
+	},
+	{
+		"id" : 51,
+		"camera_id" : "cam1",
+		"image_path" : "/tpeib_demoImg/20221231_175933037_AXE-9935.jpg",
+		"name" : "王雅芳",
+		"pass_status" : "員工",
+		"plate_number" : "AXE-9935",
+		"recognition_time" : "2022-12-31 17:59:33.037000",
+		"recognition_time_str" : "2022-12-31 17:59:33.037",
+		"vehicle_type" : ""
+	}
+]

@@ -1,9 +1,10 @@
 import ReactTable from "../table/ReactTable";
 import React, { useState, useRef } from "react";
 import { FormattedMessage } from "react-intl";
-// import ImgButton from "../table/ImgButton";
+import ImgButton from "../table/ImgButton";
 
-import testjson from "./demo.json";
+//demo json import
+import testjson from "./230104_tpeib_log.json";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 import Modal from "react-bootstrap/Modal";
@@ -62,11 +63,10 @@ export default function AccessControlDemo() {
     return (
       <tr>
         <th>姓名 </th>
-        <th>單位</th>
-        <th>備註欄</th>
-        <th>預約開始時間</th>
-        <th>預約結束時間</th>
+        <th>身份</th>
+        <th>進場時間</th>
         <th>車牌號碼</th>
+        <th>照片</th>
         <th>刪除</th>
       </tr>
     );
@@ -76,11 +76,12 @@ export default function AccessControlDemo() {
     return (
       <tr key={index}>
         <td>{value.name}</td>
-        <td>{value.unit}</td>
-        <td>{value.note}</td>
-        <td>{value.visitorStartStr}</td>
-        <td>{value.visitorEndStr}</td>
-        <td>{value.plateNumber}</td>
+        <td>{value.pass_status}</td>
+        <td>{value.recognition_time}</td>
+        <td>{value.plate_number}</td>
+        <td>
+          <ImgButton imgPath={value.image_path} />
+        </td>
         <td>
           <Button
             variant="danger"
